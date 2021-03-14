@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <meta name="generator" content="JBake">
+  <title>Deployment View</title>
+
+
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/asciidoctor.css" rel="stylesheet">
+  <link href="../../css/base.css" rel="stylesheet">
+  <link href="../../css/prettify.css" rel="stylesheet">
+  <link rel="shortcut icon" href="../../favicon.ico">
+
+  <!-- Favicons -->
+  <!-- Custom styles for this template -->
+</head>
+
+<body onload="prettyPrint()" class="d-flex flex-column h-100 toc">
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../../">arc42</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li><a class="nav-link" href="../../index.html">Home</a></li>
+
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown0" data-bs-toggle="dropdown" aria-expanded="false">arc42</a><ul class="dropdown-menu" aria-labelledby="dropdown0">
+                <li><a class="dropdown-item" href="../../arc42/chapters/01_introduction_and_goals.html">Introduction and Goals</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/02_architecture_constraints.html">Architecture Constraints</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/03_system_scope_and_context.html">System Scope and Context</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/04_solution_strategy.html">Solution Strategy</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/05_building_block_view.html">Building Block View</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/06_runtime_view.html">Runtime View</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/07_deployment_view.html">Deployment View</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/08_concepts.html">Cross-cutting Concepts</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/09_design_decisions.html">Design Decisions</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/10_quality_scenarios.html">Quality Requirements</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/11_technical_risks.html">Risks and Technical Debts</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/12_glossary.html">Glossary</a></li>
+                </ul></li>
+
+                <li><a class="nav-link" href="../../blog/index.html">Blog</a></li>
+                <li><a class="nav-link" href="../../about.html">About</a></li>
+                <li><a class="nav-link" href="../../feed.xml">RSS-Feed</a></li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+<main class="container">
+	<div class="bg-light p-5 rounded">
+		<!--h1>Deployment View</h1-->
+		<p class="lead"><div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#section-deployment-view">Deployment View</a>
+<ul class="sectlevel2">
+<li><a href="#_infrastructure_level_1">Infrastructure Level 1</a></li>
+<li><a href="#_infrastructure_level_2">Infrastructure Level 2</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="section-deployment-view">Deployment View</h2>
+<div class="sectionbody">
+<div class="sidebarblock arc42help">
+<div class="content">
+<div class="paragraph">
+<div class="title">Content</div>
+<p>The deployment view describes:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>the technical infrastructure used to execute your system, with infrastructure elements like geographical locations, environments, computers, processors, channels and net topologies as well as other infrastructure elements and</p>
+</li>
+<li>
+<p>the mapping of (software) building blocks to that infrastructure elements.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Often systems are executed in different environments, e.g. development environment, test environment, production environment. In such cases you should document all relevant environments.</p>
+</div>
+<div class="paragraph">
+<p>Especially document the deployment view when your software is executed as distributed system with more then one computer, processor, server or container or when you design and construct your own hardware processors and chips.</p>
+</div>
+<div class="paragraph">
+<p>From a software perspective it is sufficient to capture those elements of the infrastructure that are needed to show the deployment of your building blocks. Hardware architects can go beyond that and describe the infrastructure to any level of detail they need to capture.</p>
+</div>
+<div class="paragraph">
+<div class="title">Motivation</div>
+<p>Software does not run without hardware.
+This underlying infrastructure can and will influence your system and/or some
+cross-cutting concepts. Therefore, you need to know the infrastructure.</p>
+</div>
+<div class="paragraph">
+<div class="title">Form</div>
+<p>Maybe the highest level deployment diagram is already contained in section 3.2. as
+technical context with your own infrastructure as ONE black box. In this section you will
+zoom into this black box using additional deployment diagrams:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>UML offers deployment diagrams to express that view. Use it, probably with nested diagrams,
+when your infrastructure is more complex.</p>
+</li>
+<li>
+<p>When your (hardware) stakeholders prefer other kinds of diagrams rather than the deployment diagram, let them use any kind that is able to show nodes and channels of the infrastructure.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_infrastructure_level_1">Infrastructure Level 1</h3>
+<div class="sidebarblock arc42help">
+<div class="content">
+<div class="paragraph">
+<p>Describe (usually in a combination of diagrams, tables, and text):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the distribution of your system to multiple locations, environments, computers, processors, .. as well as the physical connections between them</p>
+</li>
+<li>
+<p>important justification or motivation for this deployment structure</p>
+</li>
+<li>
+<p>Quality and/or performance features of the infrastructure</p>
+</li>
+<li>
+<p>the mapping of software artifacts to elements of the infrastructure</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For multiple environments or alternative deployments please copy that section of arc42 for all relevant environments.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><em><strong>&lt;Overview Diagram&gt;</strong></em></p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Motivation</dt>
+<dd>
+<p><em>&lt;explanation in text form&gt;</em></p>
+</dd>
+<dt class="hdlist1">Quality and/or Performance Features</dt>
+<dd>
+<p><em>&lt;explanation in text form&gt;</em></p>
+</dd>
+<dt class="hdlist1">Mapping of Building Blocks to Infrastructure</dt>
+<dd>
+<p><em>&lt;description of the mapping&gt;</em></p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_infrastructure_level_2">Infrastructure Level 2</h3>
+<div class="sidebarblock arc42help">
+<div class="content">
+<div class="paragraph">
+<p>Here you can include the internal structure of (some) infrastructure elements from level 1.</p>
+</div>
+<div class="paragraph">
+<p>Please copy the structure from level 1 for each selected element.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_infrastructure_element_1"><em>&lt;Infrastructure Element 1&gt;</em></h4>
+<div class="paragraph">
+<p><em>&lt;diagram + explanation&gt;</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_infrastructure_element_2"><em>&lt;Infrastructure Element 2&gt;</em></h4>
+<div class="paragraph">
+<p><em>&lt;diagram + explanation&gt;</em></p>
+</div>
+<div class="paragraph">
+<p>&#8230;&#8203;</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_infrastructure_element_n"><em>&lt;Infrastructure Element n&gt;</em></h4>
+<div class="paragraph">
+<p><em>&lt;diagram + explanation&gt;</em></p>
+</div>
+</div>
+</div>
+</div>
+</div></p>
+	</div>
+</main>
+
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">&copy; 2020 | based on <a href="https://arc42.org">arc42 7.0</a> | mixed with <a href="http://getbootstrap.com/">Bootstrap v5.0.0-beta</a> | Baked with <a href="http://jbake.org">JBake v2.6.5</a></span>
+        </div>
+    </footer>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../js/jquery-1.11.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/prettify.js"></script>
+    
+
+
+</body>
+</html>

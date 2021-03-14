@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <meta name="generator" content="JBake">
+  <title>Introduction and Goals</title>
+
+
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/asciidoctor.css" rel="stylesheet">
+  <link href="../../css/base.css" rel="stylesheet">
+  <link href="../../css/prettify.css" rel="stylesheet">
+  <link rel="shortcut icon" href="../../favicon.ico">
+
+  <!-- Favicons -->
+  <!-- Custom styles for this template -->
+</head>
+
+<body onload="prettyPrint()" class="d-flex flex-column h-100 toc">
+
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../../">arc42</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li><a class="nav-link" href="../../index.html">Home</a></li>
+
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown0" data-bs-toggle="dropdown" aria-expanded="false">arc42</a><ul class="dropdown-menu" aria-labelledby="dropdown0">
+                <li><a class="dropdown-item" href="../../arc42/chapters/01_introduction_and_goals.html">Introduction and Goals</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/02_architecture_constraints.html">Architecture Constraints</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/03_system_scope_and_context.html">System Scope and Context</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/04_solution_strategy.html">Solution Strategy</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/05_building_block_view.html">Building Block View</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/06_runtime_view.html">Runtime View</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/07_deployment_view.html">Deployment View</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/08_concepts.html">Cross-cutting Concepts</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/09_design_decisions.html">Design Decisions</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/10_quality_scenarios.html">Quality Requirements</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/11_technical_risks.html">Risks and Technical Debts</a></li>
+                
+                <li><a class="dropdown-item" href="../../arc42/chapters/12_glossary.html">Glossary</a></li>
+                </ul></li>
+
+                <li><a class="nav-link" href="../../blog/index.html">Blog</a></li>
+                <li><a class="nav-link" href="../../about.html">About</a></li>
+                <li><a class="nav-link" href="../../feed.xml">RSS-Feed</a></li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+
+<main class="container">
+	<div class="bg-light p-5 rounded">
+		<!--h1>Introduction and Goals</h1-->
+		<p class="lead"><div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#section-introduction-and-goals">Introduction and Goals</a>
+<ul class="sectlevel2">
+<li><a href="#_requirements_overview">Requirements Overview</a></li>
+<li><a href="#_quality_goals">Quality Goals</a></li>
+<li><a href="#_stakeholders">Stakeholders</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="section-introduction-and-goals">Introduction and Goals</h2>
+<div class="sectionbody">
+<div class="sidebarblock arc42help">
+<div class="content">
+<div class="paragraph">
+<p>Describes the relevant requirements and the driving forces that software architects and development team must consider. These include</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>underlying business goals, essential features and functional requirements for the system</p>
+</li>
+<li>
+<p>quality goals for the architecture</p>
+</li>
+<li>
+<p>relevant stakeholders and their expectations</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_requirements_overview">Requirements Overview</h3>
+<div class="sidebarblock arc42help">
+<div class="content">
+<div class="paragraph">
+<div class="title">Contents</div>
+<p>Short description of the functional requirements, driving forces, extract (or abstract)
+of requirements. Link to (hopefully existing) requirements documents
+(with version number and information where to find it).</p>
+</div>
+<div class="paragraph">
+<div class="title">Motivation</div>
+<p>From the point of view of the end users a system is created or modified to
+improve support of a business activity and/or improve the quality.</p>
+</div>
+<div class="paragraph">
+<div class="title">Form</div>
+<p>Short textual description, probably in tabular use-case format.
+If requirements documents exist this overview should refer to these documents.</p>
+</div>
+<div class="paragraph">
+<p>Keep these excerpts as short as possible. Balance readability of this document with potential redundancy w.r.t to requirements documents.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_quality_goals">Quality Goals</h3>
+<div class="sidebarblock arc42help">
+<div class="content">
+<div class="paragraph">
+<div class="title">Contents</div>
+<p>The top three (max five) quality goals for the architecture whose fulfillment is of highest importance to the major stakeholders. We really mean quality goals for the architecture. Don&#8217;t confuse them with project goals. They are not necessarily identical.</p>
+</div>
+<div class="paragraph">
+<div class="title">Motivation</div>
+<p>You should know the quality goals of your most important stakeholders, since they will influence fundamental architectural decisions. Make sure to be very concrete about these qualities, avoid buzzwords.
+If you as an architect do not know how the quality of your work will be judged …</p>
+</div>
+<div class="paragraph">
+<div class="title">Form</div>
+<p>A table with quality goals and concrete scenarios, ordered by priorities</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_stakeholders">Stakeholders</h3>
+<div class="sidebarblock arc42help">
+<div class="content">
+<div class="paragraph">
+<div class="title">Contents</div>
+<p>Explicit overview of stakeholders of the system, i.e. all person, roles or organizations that</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>should know the architecture</p>
+</li>
+<li>
+<p>have to be convinced of the architecture</p>
+</li>
+<li>
+<p>have to work with the architecture or with code</p>
+</li>
+<li>
+<p>need the documentation of the architecture for their work</p>
+</li>
+<li>
+<p>have to come up with decisions about the system or its development</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Motivation</div>
+<p>You should know all parties involved in development of the system or affected by the system.
+Otherwise, you may get nasty surprises later in the development process.
+These stakeholders determine the extent and the level of detail of your work and its results.</p>
+</div>
+<div class="paragraph">
+<div class="title">Form</div>
+<p>Table with role names, person names, and their expectations with respect to the architecture and its documentation.</p>
+</div>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Role/Name</th>
+<th class="tableblock halign-left valign-top">Contact</th>
+<th class="tableblock halign-left valign-top">Expectations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Role-1&gt;</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Contact-1&gt;</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Expectation-1&gt;</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Role-2&gt;</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Contact-2&gt;</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Expectation-2&gt;</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></p>
+	</div>
+</main>
+
+
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <span class="text-muted">&copy; 2020 | based on <a href="https://arc42.org">arc42 7.0</a> | mixed with <a href="http://getbootstrap.com/">Bootstrap v5.0.0-beta</a> | Baked with <a href="http://jbake.org">JBake v2.6.5</a></span>
+        </div>
+    </footer>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../js/jquery-1.11.1.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/prettify.js"></script>
+    
+
+
+</body>
+</html>
